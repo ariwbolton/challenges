@@ -31,4 +31,6 @@ def coin_sums(denominations: [int], target: int, denomination_index=None, memo=N
 
     return coin_sum
 
+# Also used for Prob76!
+# print(coin_sums(list(range(1, 100)), 100))
 print(coin_sums([1, 2, 5, 10, 20, 50, 100, 200], 200))
