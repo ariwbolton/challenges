@@ -1,36 +1,22 @@
-import math
+import sympy
 
-primeBool = [True] * 1000000
-primes = []
 
-for i in range(2, 1001):
-    for multiple in range(2, (1000000 / i)):
-        primeBool[i * multiple] = False
+def get_all_rotations(n):
+    n_str = str(n)
 
-"""
-1000000 = i * multiple
-"""
+    return [int(n_str[i:] + n_str[:i]) for i in range(len(n_str))]
 
-numCircularPrimes = 0
+def circular_primes(up_to):
+    results = set()
 
-for i in range(2, 1000000):
-    if primeBool[i] == True:
-        primes.append(i)
+    for i in range(up_to + 1):
+        if i not in results and sympy.isprime(i):
+            rotations = get_all_rotations(i)
+            if all(sympy.isprime(p) for p in rotations):
+                for p in rotations:
+                    results.add(p)
 
-for num in primes:
-    newNum = num
-    numPrimesInNum = 0
-    
-    for numRotations in range(int(math.ceil(math.log(num)))):
-        
-        if newNum in primes:
-            numPrimesInNum = numPrimesInNum + 1
-        
-        remainder = num % 10
-        newNum = num - remainder
-        newNum = (newNum / 10) + ((numRotations - 1) * remainder)
+    return len(results)
 
-    if numPrimesInNum == int(math.ceil(math.log(num))):
-        numCircularPrimes = numCircularPrimes + 1
-        
-print(numCircularPrimes)
+print((circular_primes(10 ** 6)))
+

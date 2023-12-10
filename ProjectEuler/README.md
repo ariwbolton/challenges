@@ -1,29 +1,7 @@
 # project-euler
 
 Solutions to Project Euler problems (found at projecteuler.net),
-primarily done in Python and Lua.
+primarily done in Python, with a couple done in Lua.
 
-# Problems
-
-- 19
-- 20
-- 24
-- 26
-- 27
-- 35
-- 37
-- 40
-- 41
-- 42
-- 43
-- 44
-- 46
-- 48
-- 50
-- 51 (unfinished)
-- 52
-- 59
-- 60
-- 66
-- 97
-- 521 
+There's a fair amount of code duplication across problems; when I started doing them many years ago (2013!) I was a bit
+lazier about refactoring.

@@ -3,7 +3,7 @@ import sympy
 def triangle_containment():
     triangles = []
 
-    with open('./0102_triangles.txt', 'r') as f:
+    with open('0102_triangles.txt', 'r') as f:
         for line in f.readlines():
             nums = [int(num_str) for num_str in line.strip().split(',')]
             points = [
