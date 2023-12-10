@@ -25,7 +25,7 @@ class Pair:
 
 heap = list()
 
-print "Creating heap"
+print("Creating heap")
 
 pentagonals = list()
 
@@ -41,18 +41,18 @@ for i in range(1, n):
 
     pentagonals.append(p1)
 
-print "Preparing to heapify"
+print("Preparing to heapify")
 
 heapq.heapify(heap)
-print "Heapified"
+print("Heapified")
 
 
 while len(heap) != 0:
     smallest = heapq.heappop(heap)
 
     if isPentagonal(smallest.D):
-        print smallest
+        print(smallest)
         exit()
 
-print "No numbers found"
+print("No numbers found")
 

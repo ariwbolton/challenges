@@ -26,4 +26,4 @@ def is_pandigital_combo(*nums: [int]):
 
     return len(s) == 9 and len(set(s) - {'0'}) == 9
 
-print(pandigital_multiples())
+print((pandigital_multiples()))

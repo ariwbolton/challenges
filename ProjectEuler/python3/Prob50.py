@@ -48,5 +48,5 @@ def longest_prime_sum(n):
 
     return max_length_prime
 
-print('result', longest_prime_sum(1000000))
+print(('result', longest_prime_sum(1000000)))
 

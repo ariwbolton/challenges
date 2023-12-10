@@ -19,4 +19,4 @@ def is_pandigital_combo(a, b, c):
 
     return len(s) == 9 and len(set(s) - { '0' }) == 9
 
-print(pandigital_products())
+print((pandigital_products()))

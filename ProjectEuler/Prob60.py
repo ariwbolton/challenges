@@ -9,11 +9,11 @@ n = 10000
 lenOfSet = 4
 a = sieve(n*n)
 
-print "Finished Sieve"
+print("Finished Sieve")
 
 primes = [i for i in range(2, n*n) if a[i]]
 
-print "Finished primes"
+print("Finished primes")
 
 lowerPrimes = [i for i in primes if i <= n]
 
@@ -78,13 +78,13 @@ def constructLargerSet(currentSet, cSMutual):
 def runner():
 	a = set()
 	for x in lowerPrimes:
-		print x
+		print(x)
 		a.add(x)
 		constructLargerSet(a, primeDict[x])
 		a.discard(x)
 
 runner()
 
-print setsOfFive
+print(setsOfFive)
 	
 

@@ -21,7 +21,7 @@ def spiral_primes():
     primes_on_diagonals = 3
 
     while primes_on_diagonals / total_diagonals_for_layer(layer) >= 0.1:
-        print(layer, primes_on_diagonals, total_diagonals_for_layer(layer), primes_on_diagonals / total_diagonals_for_layer(layer))
+        print((layer, primes_on_diagonals, total_diagonals_for_layer(layer), primes_on_diagonals / total_diagonals_for_layer(layer)))
 
         layer += 1
 
@@ -29,9 +29,9 @@ def spiral_primes():
             if sympy.isprime(n):
                 primes_on_diagonals += 1
 
-    print(layer, primes_on_diagonals, total_diagonals_for_layer(layer), primes_on_diagonals / total_diagonals_for_layer(layer))
+    print((layer, primes_on_diagonals, total_diagonals_for_layer(layer), primes_on_diagonals / total_diagonals_for_layer(layer)))
 
     return side_length(layer)
 
 
-print(spiral_primes())
+print((spiral_primes()))

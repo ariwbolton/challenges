@@ -5,15 +5,15 @@ def sieve(n):
     starttime = time.clock()
     array = [1] * (n + 1)
 
-    for i in xrange(2, int(math.sqrt(n)) + 1):
+    for i in range(2, int(math.sqrt(n)) + 1):
         if array[i]:
-            for j in xrange(2, (n / i) + 1):
+            for j in range(2, (n / i) + 1):
                 array[i * j] = 0
 
                    
 
     endtime = time.clock()
-    print "Took %f seconds" % (endtime - starttime)
+    print("Took %f seconds" % (endtime - starttime))
     return array
 
 
@@ -41,13 +41,13 @@ def runProg():
     numprimes = 0
 
     
-    for a in xrange(-1000, 999):
-        print a
-        for b in xrange(999):
+    for a in range(-1000, 999):
+        print(a)
+        for b in range(999):
             generatePrimes(a, b, maxa, maxb, numprimes, primes)
 
-    print str(maxa) + " " + str(maxb) + " " + str(numprimes)
-    print maxa * maxb
+    print(str(maxa) + " " + str(maxb) + " " + str(numprimes))
+    print(maxa * maxb)
 
 runProg()
         

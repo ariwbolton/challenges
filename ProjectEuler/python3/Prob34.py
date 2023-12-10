@@ -18,4 +18,4 @@ def digit_factorials():
 
     return sum(curious_numbers)
 
-print(digit_factorials())
+print((digit_factorials()))

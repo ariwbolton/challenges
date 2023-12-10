@@ -22,8 +22,8 @@ def integer_right_triangles(max_perimeter: int):
 
         count_by_perimeter[perimeter] += 1
 
-    max_perimeter, max_count = max(count_by_perimeter.items(), key=lambda x: x[1])
+    max_perimeter, max_count = max(list(count_by_perimeter.items()), key=lambda x: x[1])
 
     return max_perimeter
 
-print(integer_right_triangles(1000))
+print((integer_right_triangles(1000)))

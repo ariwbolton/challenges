@@ -18,5 +18,5 @@ def circular_primes(up_to):
 
     return len(results)
 
-print(circular_primes(10 ** 6))
+print((circular_primes(10 ** 6)))
 

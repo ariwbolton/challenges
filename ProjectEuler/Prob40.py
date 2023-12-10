@@ -24,7 +24,7 @@ while length <= 1000000:
     length += 1
 
 
-print total
+print(total)
 
 
 

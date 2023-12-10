@@ -8,14 +8,14 @@ def modifiedSieve(n):
 
 	array = [0] * (n + 1)
 
-	for i in xrange(2, int(math.sqrt(n)) + 1):
+	for i in range(2, int(math.sqrt(n)) + 1):
 		if i % 100 == 0:
-			print "Sieve at:", i
+			print("Sieve at:", i)
 
 		if array[i] != 0:
 			continue
 
-		for j in xrange((i + i), n + 1, i):
+		for j in range((i + i), n + 1, i):
 			if array[j] == 0:
 				array[j] = i
 
@@ -27,13 +27,13 @@ Sum = 0
 
 array = modifiedSieve(10**8)
 
-for i in xrange(2, len(array)):
+for i in range(2, len(array)):
 	if i % 10000 == 0:
-		print "Sum at:", i
+		print("Sum at:", i)
 	if array[i] == 0:
 		Sum = (Sum + i) % M
 	else:
 		Sum = (Sum + array[i]) % M
 
 
-print Sum
+print(Sum)

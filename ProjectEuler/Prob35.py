@@ -3,8 +3,8 @@ import math
 primeBool = [True] * 1000000
 primes = []
 
-for i in xrange(2, 1001):
-    for multiple in xrange(2, (1000000 / i)):
+for i in range(2, 1001):
+    for multiple in range(2, (1000000 / i)):
         primeBool[i * multiple] = False
 
 """
@@ -13,7 +13,7 @@ for i in xrange(2, 1001):
 
 numCircularPrimes = 0
 
-for i in xrange(2, 1000000):
+for i in range(2, 1000000):
     if primeBool[i] == True:
         primes.append(i)
 
@@ -21,7 +21,7 @@ for num in primes:
     newNum = num
     numPrimesInNum = 0
     
-    for numRotations in xrange(int(math.ceil(math.log(num)))):
+    for numRotations in range(int(math.ceil(math.log(num)))):
         
         if newNum in primes:
             numPrimesInNum = numPrimesInNum + 1
@@ -33,4 +33,4 @@ for num in primes:
     if numPrimesInNum == int(math.ceil(math.log(num))):
         numCircularPrimes = numCircularPrimes + 1
         
-print numCircularPrimes
+print(numCircularPrimes)

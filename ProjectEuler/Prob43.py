@@ -12,7 +12,7 @@ for p in permutations("0123456789", 10):
 
     perm = "".join(list(p))
 
-    for i in xrange(1, 8):
+    for i in range(1, 8):
         if int(perm[i:i+3]) % divisors[i-1] != 0:
             isValid = False
             break
@@ -20,4 +20,4 @@ for p in permutations("0123456789", 10):
     if isValid:
         total += int(perm)
 
-print total
+print(total)

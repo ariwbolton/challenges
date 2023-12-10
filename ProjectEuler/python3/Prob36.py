@@ -4,4 +4,4 @@ def double_base_palindromes(up_to):
 def is_palindrome(s):
     return s == s[::-1]
 
-print(double_base_palindromes(10 ** 6))
+print((double_base_palindromes(10 ** 6)))

@@ -1,7 +1,7 @@
 
 triangleNums = set()
 
-for i in xrange(1, 50):
+for i in range(1, 50):
     triangleNums.add((i * (i+1)) // 2)
 
 
@@ -29,4 +29,4 @@ for word in words:
     if isTriangleWord(word):
         numTriangleWords += 1
 
-print numTriangleWords
+print(numTriangleWords)

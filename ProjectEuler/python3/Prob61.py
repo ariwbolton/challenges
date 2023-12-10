@@ -50,7 +50,7 @@ class PolygonalManager:
     def _build_numbers(self, digits):
         sets = {i: truncate_to_range(get_polygonals(10 ** digits, i), 10 ** (digits - 1), 10 ** digits) for i in self.all_bases()}
 
-        return sorted([PolygonalNumber(i, base) for base, ps in sets.items() for i in ps])
+        return sorted([PolygonalNumber(i, base) for base, ps in list(sets.items()) for i in ps])
 
     def _build_by_number(self):
         v = defaultdict(set)
@@ -152,7 +152,7 @@ def cyclical_figurate_numbers():
 
     nodes: Dict[PolygonalNumber, Node] = {n: Node(n) for n in polygonal_manager.all}
 
-    for pn, node in nodes.items():
+    for pn, node in list(nodes.items()):
         for chained_p in fixed_prefix_map.for_prefix(suffix(pn.n, 2)):
             for base in polygonal_manager.get_bases(chained_p):
                 if base != pn.base:
@@ -162,7 +162,7 @@ def cyclical_figurate_numbers():
     dfs_state = DFSState()
 
     # Next, conduct DFS from each number to see if we can find a path which contains all polygonal bases
-    for node in nodes.values():
+    for node in list(nodes.values()):
         # There's only one, and it's a cycle, so we should be able to limit to starting from a base of 3
         if node.pn.base != 3:
             continue
@@ -174,7 +174,7 @@ def cyclical_figurate_numbers():
         dfs_state.pop()
 
     for saved in dfs_state.saved:
-        print(saved, sum(pn.n for pn in saved))
+        print((saved, sum(pn.n for pn in saved)))
 
 def dfs(
     s: DFSState,

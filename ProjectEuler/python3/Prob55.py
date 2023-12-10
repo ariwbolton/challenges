@@ -24,4 +24,4 @@ def is_lychrel(n):
 
     return is_lychrel
 
-print(lychrel_numbers(10_000))
+print((lychrel_numbers(10_000)))

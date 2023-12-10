@@ -17,7 +17,7 @@ def prime_permutations():
     for prime in primes_4_digit:
         prime_digit_decomposition_map[digit_decomposition(prime)].append(prime)
 
-    for decomposition, primes in prime_digit_decomposition_map.items():
+    for decomposition, primes in list(prime_digit_decomposition_map.items()):
         if len(primes) < 3:
             continue
 
@@ -25,6 +25,6 @@ def prime_permutations():
 
         for (p1, p2, p3) in combinations(sorted_primes, 3):
             if (p2 - p1) == (p3 - p2):
-                print(p1, p2, p3)
+                print((p1, p2, p3))
 
 prime_permutations()

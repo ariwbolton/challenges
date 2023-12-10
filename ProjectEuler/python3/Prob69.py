@@ -12,4 +12,4 @@ def totient_maximum(up_to):
 
     return max_quotient_n
 
-print(totient_maximum(10 ** 6))
+print((totient_maximum(10 ** 6)))

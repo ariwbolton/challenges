@@ -27,4 +27,4 @@ def triangle_containment():
             # If so, the origin is either "on the right/left" for each vertex, and therefore is in the triangle
     return sum(triangle.encloses_point(origin) for triangle in triangles)
 
-print(triangle_containment())
+print((triangle_containment()))

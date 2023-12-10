@@ -4,7 +4,7 @@ N = 10000000000
 def runner():
     rem = 0
     
-    for num in xrange(1, 1001):
+    for num in range(1, 1001):
         rem = (rem + findRem(num)) % N
 
     return rem
@@ -12,9 +12,9 @@ def runner():
 def findRem(num):
     r = 1
 
-    for i in xrange(num):
+    for i in range(num):
         r = (r * num) % N
 
     return r
 
-print runner()
+print(runner())

@@ -7,4 +7,4 @@ tot = 0
 for letter in stri:
     tot += int(letter)
 
-print tot
+print(tot)

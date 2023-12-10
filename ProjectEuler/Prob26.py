@@ -5,4 +5,4 @@ for i in range(1,40):
     numbers.append(t)
 
 
-print numbers
+print(numbers)

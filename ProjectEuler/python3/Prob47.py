@@ -20,4 +20,4 @@ def distinct_prime_factors(seq_length, num_factors):
 
     return i - seq_length
 
-print(distinct_prime_factors(4, 4))
+print((distinct_prime_factors(4, 4)))

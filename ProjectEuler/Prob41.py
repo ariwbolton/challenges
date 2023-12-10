@@ -23,6 +23,6 @@ for (prime, isPrime) in reversedEnumeratedSieveArray:
         continue
 
     if isPandigital(prime):
-        print prime
+        print(prime)
         break
 

@@ -12,9 +12,9 @@ def findRem(base, power):
 	# find (base ** power) % N
     r = 1
 
-    for i in xrange(power):
+    for i in range(power):
         r = (r * base) % N
 
     return r
 
-print runner()
+print(runner())

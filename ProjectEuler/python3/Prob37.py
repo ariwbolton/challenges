@@ -34,4 +34,4 @@ def truncatable_primes():
 
     return sum(results)
 
-print(truncatable_primes())
+print((truncatable_primes()))
